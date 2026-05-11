@@ -166,32 +166,44 @@ button:hover {
 .price {
   font-size: 18px;
   font-weight: bold;
-  color: #00ffcc;
+  color: white
 }
 
-.products-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:30px;
-    padding:40px;
+.products-grid,
+.onhand-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    justify-items: center;
 }
 
 .product-card{
-    background:#050505;
-    border:1px solid gold;
-    border-radius:20px;
-    padding:20px;
-    text-align:center;
+    width: 260px;
+    background: #050505;
+    border: 1px solid gold;
+    border-radius: 18px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.2s ease;
+}
 
-    width:100%;
-    max-width:280px;
+.product-card:hover{
+    transform: translateY(-4px);
 }
 
 .product-card img{
-    width:100%;
-    height:260px;
-    object-fit:contain;
-    margin-bottom:20px;
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.product-card h3{
+    font-size: 15px;
+    text-align: center;
+    min-height: 42px;
 }
 
 .onhand-grid{
@@ -252,9 +264,11 @@ button:hover {
 
 
 /* 🔥 GOLD PRIMARY */
-.btn-gold {
-  background: linear-gradient(135deg, gold, #facc15);
-  color: black;
+.btn-gold{
+    margin-top: 14px;
+    padding: 10px 16px;
+    font-size: 13px;
+    border-radius: 10px;
 }
 
 .btn-dark:hover {
@@ -379,10 +393,10 @@ button:hover {
 
 
 /* PRICE */
-.price {
-  font-size: 25px;
-  font-weight: bold;
-  color: #fff;
+.price{
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 8px;
 }
 
 .dp {
@@ -661,11 +675,22 @@ button:hover {
 }
 
 .qty-box{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    margin:15px 0;
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.qty-box button{
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.qty-input{
+    width: 50px;
+    height: 30px;
+    text-align: center;
 }
 
 .qty-btn{
