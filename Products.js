@@ -61,7 +61,7 @@ const products = [
 
 { 
     name:"Pokemon TCG [ME05] Pitch Black Half Booster",
-    img: "Half Booster.png",
+    img: "half booster.png",
     unitPrice: 4300,
     casePrice: 51600,
     unitDP: 1290,
