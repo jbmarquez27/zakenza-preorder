@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZAKENZA Preorder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<div class="topbar">
+
+    <div class="top-left">
+
+        <div class="logo">
+            <img src="assets/zakenza-logo.png">
+        </div>
+
+        <h1>TCG • COLLECTIBLES</h1>
+
+    </div>
+
+    <!-- CENTER NAV -->
+    <div class="top-nav">
+
+        <a href="index.html" class="nav-btn active">
+            Home
+        </a>
+
+        <a href="index.html" class="nav-btn">
+            Preorders
+        </a>
+
+        <a href="onhand.html" class="nav-btn">
+            On Hand
+        </a>
+
+    </div>
+
+    <button class="cart-btn" onclick="toggleCart()">
+
+    <div class="cart-left">
+        <span class="cart-icon">🛒</span>
+
+        <div class="cart-info">
+            <span class="cart-label">
+                Cart Total
+            </span>
+
+            <span id="cart-total">
+                ₱0
+            </span>
+        </div>
+    </div>
+
+    <span id="cart-count"
+    class="cart-badge">
+        0
+    </span>
+
+</button>
+
+</div>
+
+<div id="cartDrawer" class="cart-drawer">
+
+    <div class="cart-header">
+        <h2>YOUR CART</h2>
+
+        <button onclick="toggleCart()">✕</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-footer">
+
+        <div class="summary-row">
+            <span>Total:</span>
+            <span id="drawer-total">₱0</span>
+        </div>
+
+       <button 
+    class="checkout-btn messenger-btn"
+    onclick="window.open('https://m.me/marquez.1927/','_blank')">
+
+    Assisted Checkout
+
+</button>
+
+<button
+class="checkout-btn qr-btn"
+onclick="toggleQR()"
+>
+    Self Checkout
+</button>    
+</button>
+
+
+    </div>
+
+</div>
+
+<div id="qrModal" class="qr-modal hidden">
+
+<div class="zakenza-pay-box">
+
+<div class="zakenza-pay-header">
+
+<div>
+<p class="pay-tag">ZAKENZA CHECKOUT</p>
+<h2>ORDER BREAKDOWN</h2>
+</div>
+
+<button onclick="toggleQR()" class="close-pay">✕</button>
+
+</div>
+
+<div class="checkout-summary">
+
+<div class="summary-top">
+<div>
+</div>
+
+<div class="pay-now">
+TO BE PAID NOW
+</div>
+</div>
+
+<div class="summary-line"></div>
+
+<div class="summary-bottom">
+
+</div>
+
+</div>
+
+<div class="zakenza-payment-grid">
+
+<div class="zakenza-payment-card">
+<img src="assets/gcash-qr.png">
+<h3>GCash</h3>
+<p>Jose Bernardo Marquez</p>
+</div>
+
+<div class="zakenza-payment-card">
+<img src="assets/maribank-qr.png">
+<h3>MariBank</h3>
+<p>Jose Bernardo Marquez</p>
+</div>
+
+</div>
+
+<a
+href="https://m.me/marquez.1927"
+target="_blank"
+class="zakenza-send-btn">
+
+SEND PROOF TO MESSENGER
+
+</a>
+
+</div>
+
+</div>
+
+
+<div id="productContainer" class="onhand-grid">
+
+</div>
+
+<script src="onhand.js"></script>
+</body>
+</html>
