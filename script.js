@@ -35,7 +35,7 @@ const products = [
 
 {
   name: "Pokemon TCG [ME05] Pitch Black Booster Box",
-  img: "pitch black booster box.png",
+  img: "Pitch Black Booster Box.png",
   unitPrice: 8500,
   unitDP: 2550,
   status: "coming",
@@ -49,7 +49,7 @@ const products = [
 
 {
   name: "Pokemon TCG [ME05] Pitch Black Booster Bundle",
-  img: "pitch black booster bundle.png",
+  img: "Pitch Black Booster Bundle.png",
   unitPrice: 2000,
   unitDP: 600,
   status: "coming",
@@ -94,7 +94,7 @@ const products = [
 
 { 
     name:"Pokemon TCG [ME05] Pitch Black Half Booster",
-    img: "Half Booster.png",
+    img: "Half booster.png",
     unitPrice: 4300,
     casePrice: 51600,
     unitDP: 1290,
