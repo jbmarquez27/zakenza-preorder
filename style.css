@@ -1317,6 +1317,7 @@ button:hover {
     opacity:.9;
 }
 
+
 @media(max-width:768px){
 
     .zakenza-payment-grid{
@@ -1329,7 +1330,8 @@ button:hover {
         gap:10px;
     }
 
-.stock{
+}
+
     color:#7cff7c;
     font-size:14px;
     margin-top:8px;
@@ -1441,17 +1443,19 @@ h1{
 }
 
 
-@media (max-width:768px){
+@media screen and (max-width:768px){
 
-    .cart-drawer{
-        width:100%;
-        right:-100%;
-        border-left:none;
-    }
+  .cart-drawer{
+      width:100vw !important;
+      right:-100vw !important;
+      left:auto !important;
+      max-width:none !important;
+  }
 
-    .cart-drawer.open{
-        right:0;
-    }
+  .cart-drawer.open,
+  .cart-drawer.show{
+      right:0 !important;
+  }
 
 }
 
@@ -1494,6 +1498,30 @@ h1{
         height:180px;
     }
 
+}
+
+@media screen and (max-width:768px){
+
+  #productContainer{
+      grid-template-columns:1fr !important;
+      gap:15px !important;
+      padding:15px !important;
+  }
+
+}
+
+@media screen and (max-width:768px){
+
+  #productContainer{
+      grid-template-columns:1fr !important;
+      gap:15px !important;
+      padding:15px !important;
+  }
+
+}
+
+.stock{
+   color:#7cff7c;
 }
 
 
