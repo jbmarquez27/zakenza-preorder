@@ -1437,42 +1437,70 @@ h1{
 /* MOBILE */
 
 
-#productContainer,
-.products-grid,
-.onhand-grid{
-    display:grid;
-    grid-template-columns:repeat(2,2fr);
-    gap:12px;
-    padding:10px;
-}
+@media (max-width:768px){
 
-.product-card{
-    min-height:620px;
-    height:auto;
-    overflow:hidden;
-    padding:12px;
-}
+    #productContainer,
+    .products-grid,
+    .onhand-grid{
+        display:grid;
+        grid-template-columns:repeat(2, minmax(0,1fr));
+        gap:10px;
+        padding:10px;
+    }
 
-.product-card img{
-    max-width:140px;
-    height:100px;
-    object-fit:contain;
-}
+    .product-card{
+        width:100%;
+        height:auto;
+        min-height:auto;
+        overflow:visible;
+        padding:10px;
+        box-sizing:border-box;
+    }
 
-.product-card h3{
-    font-size:13px;
-    line-height:1.3;
-}
+    .product-card img{
+        width:100%;
+        max-width:120px;
+        height:90px;
+        object-fit:contain;
+        margin:auto;
+    }
 
-.price{
-    font-size:16px;
-}
+    .product-card h3{
+        font-size:12px;
+        line-height:1.3;
+        min-height:48px;
+        margin:8px 0;
+    }
 
-.dp{
-    font-size:12px;
-}
+    .price{
+        font-size:14px;
+    }
 
-.details{
-    font-size:10px;
-    line-height:1.3;
+    .dp{
+        font-size:11px;
+    }
+
+    .details{
+        font-size:10px;
+        line-height:1.3;
+    }
+
+    .qty-btn{
+        width:32px;
+        height:32px;
+        font-size:18px;
+    }
+
+    .qty-input{
+        width:50px;
+        height:32px;
+        font-size:16px;
+    }
+
+    .btn-add,
+    .cart-btn{
+        width:100%;
+        font-size:12px;
+        padding:10px;
+    }
 }
