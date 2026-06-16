@@ -1436,25 +1436,44 @@ h1{
 
 /* MOBILE */
 
-
- /* Header */
-    .logo img{
-        max-width:180px;
-        width:100%;
+    .header{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:15px;
+        padding:15px;
     }
 
-    .logo{
+    .logo img{
+        width:180px;
+        max-width:100%;
+        height:auto;
+    }
+
+    .header-title{
+        font-size:18px;
         text-align:center;
     }
 
-    .header,
-    .top-bar{
-        padding:10px;
+    .nav-links{
+        display:flex;
+        width:100%;
+        justify-content:center;
+        gap:10px;
+        flex-wrap:wrap;
     }
 
-    .cart-summary{
-        max-width:220px;
+    .nav-links a,
+    .nav-btn{
+        min-width:90px;
+        padding:10px 15px;
         font-size:14px;
+    }
+
+    .cart-summary,
+    .cart-total{
+        width:220px;
+        margin:0 auto;
     }
 
     /* Product Grid */
