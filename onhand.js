@@ -2,16 +2,48 @@ let cart = [];
 
 const products = [
 {
-    name: "Sample Product",
-    price: 1500,
-    stock: 12,
-    img: "firstpartner.png"
+    name: "Psa 10 Gastly (JP)",
+    price: 8500,
+    stock: 1,
+    img: "gastly.png"
 },
+
 {
-    name: "Sample Product 2",
-    price: 2200,
-    stock: 12,
-    img: "firstpartner.png"
+    name: "Ascended Heroes ETB",
+    price: 11000,
+    stock: 5,
+    img: "ASC ETB.png"
+},
+
+
+{
+    name: "One Piece Booster Box OP-13 (Jp)",
+    price: 9000,
+    stock: 11,
+    img: "OP 13.png"
+},
+
+
+{
+    name: "Psa 10 Ethans Typhlosion",
+    price: 4500,
+    stock: 1,
+    img: "Typlo.png"
+},
+
+
+{
+    name: "Ascended Heroes Booster Bundle Display Case",
+    price: 95000,
+    stock: 1,
+    img: "Booster Bundle Display Case.png"
+},
+
+{
+    name: "Nihil Zero Booster Box (JP)",
+    price: 4500,
+    stock: 1,
+    img: "Nihil Zero.png"
 }
 ];
 
