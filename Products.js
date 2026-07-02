@@ -1,83 +1,120 @@
 const products = [
   {
-    name: "First Partner Pack – Series 2",
-    img: "firstpartner.png",
-    unitPrice: 1400,
-    casePrice: 8400,
-    unitDP: 420,
-    caseDP: 2520,
-    deadline: "2026-05-02T18:00:00"
-  },
-
-  {
-    name: "Mega Greninja EX Premium Collection",
-    img: "greninja.png",
-    unitPrice: 3600,
-    casePrice: 21600,
-    unitDP: 1080,
-    caseDP: 6480,
+    name: "30th Celebration UPC Day & Night",
+    img: "Day.png",
+    unitPrice: 12000,
+    unitDP: 3600,
     deadline: "2026-05-02T18:00:00"
   },
 
 {
-    name: "Pokemon TCG [ME05] Pitch Black Booster Box",
-    img: "Pitch Black Booster Box.png",
-    unitPrice: 8500,
-    casePrice: 51000,
-    unitDP: 2550,
-    caseDP: 15300,
-    deadline: "2026-05-02T18:00:00"
-  },
-
-{
-    name: "Pokemon TCG [ME05] Pitch Black Booster Bundle ",
-    img: "Pitch Black Booster Bundle.png",
+    name: "Pokemon TCG 30th Booster Bundle ",
+    img: "30th Booster Bundle.png",
     unitPrice: 2000,
-    casePrice: 50000,
     unitDP: 600,
-    caseDP: 15000,
+    deadline: "2026-05-02T18:00:00"
+  },
+
+
+{ 
+    name:"Pokemon TCG 30th Celebration ETB",
+    img: "ETB 30th.png",
+    unitPrice: 3950,
+    unitDP: 1185,
     deadline: "2026-05-02T18:00:00"
   },
 
 { 
-    name: "Pokemon TCG [ME05] Pitch Black Blister ",
-    img: "Blister.png",
-    unitPrice: 350,
-    casePrice: 100800,
-    unitDP: 105,
-    caseDP: 30240,
-    deadline: "2026-05-02T18:00:00"
-  },
-
-{
-    name: "Pokemon TCG [ME05] Pitch Black Sleeved Booster",
-    img: "Pitch Black Sleeves.png",
-    unitPrice: 290,
-    casePrice: 41760,
-    unitDP: 87,
-    caseDP: 12528,
+    name:"Pokemon TCG 30th Celebration Sylveon & Greninja EX BOX",
+    img: "EX Box.png",
+    unitPrice: 3950,
+    unitDP: 1185,
     deadline: "2026-05-02T18:00:00"
   },
 
 { 
-    name:"Pokemon TCG [ME05] Pitch Black Half Booster",
-    img: "half booster.png",
-    unitPrice: 4300,
-    casePrice: 51600,
-    unitDP: 1290,
-    caseDP: 15480,
+    name:"Pokemon TCG 30th Celebration Tech Sticker Collection",
+    img: "Tech Sticker Collection.png",
+    unitPrice: 3950,
+    unitDP: 1185,
+    deadline: "2026-05-02T18:00:00"
+  },
+
+
+
+{ 
+    name:"Pokemon TCG 30th Celebration Poster Collection",
+    img: "Poster Collection.png",
+    unitPrice: 3950,
+    unitDP: 1185,
     deadline: "2026-05-02T18:00:00"
   },
 
 { 
-    name:"Pokemon TCG [ME05] Pitch Black ETB",
-    img: "Pitch Black ETB.png",
-    unitPrice: 3600,
-    casePrice: 36000,
-    unitDP: 1080,
-    caseDP: 10800,
+    name:"Pokemon TCG 30th Celebration Binder Collection",
+    img: "Binder Collection.png",
+    unitPrice: 3950,
+    unitDP: 1185,
+    deadline: "2026-05-02T18:00:00"
+  },
+
+
+
+{ 
+    name:"Pokemon TCG 30th Celebration 2 pack Blister",
+    img: "2 pack Blister.png",
+    unitPrice: 3950,
+    unitDP: 1185,
+    deadline: "2026-05-02T18:00:00"
+  },
+
+
+{ 
+    name:"Pokemon TCG 30th Celebration Knockout Collection",
+    img: "Knockout Collection.png",
+    unitPrice: 3950,
+    unitDP: 1185,
+    deadline: "2026-05-02T18:00:00"
+  },
+
+{ 
+    name:"Pokemon TCG 30th Celebration Battle Deck",
+    img: "Battle Deck.png",
+    unitPrice: 3950,
+    unitDP: 1185,
+    deadline: "2026-05-02T18:00:00"
+  },
+
+{ 
+    name:"Pokemon TCG 30th Celebration Mini Tins",
+    img: "Mini Tins.png",
+    unitPrice: 3950,
+    unitDP: 1185,
+    deadline: "2026-05-02T18:00:00"
+  },
+
+{ 
+    name:"Pokemon TCG 30th Celebration Ditto Premium Collection",
+    img: "Ditto Premium Collection.png",
+    unitPrice: 3950,
+    unitDP: 1185,
+    deadline: "2026-05-02T18:00:00"
+  },
+
+{ 
+    name:"Pokemon TCG 30th Celebration Mew & Mewtwo Figure",
+    img: "Figure Mew.png",
+    unitPrice: 3950,
+    unitDP: 1185,
     deadline: "2026-05-02T18:00:00"
   }
+
+
+
+
+
+
+
 
 
 ];
