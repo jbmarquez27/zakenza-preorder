@@ -26,9 +26,9 @@
     <!-- CENTER NAV -->
     <div class="top-nav">
 
-        <a href="index.html" class="nav-btn active">
-            Home
-        </a>
+        <button class="nav-btn active" onclick="toggleCalculator()">
+    Calculator
+</button>
 
         <a href="index.html" class="nav-btn">
             Preorders
@@ -109,113 +109,90 @@ onclick="toggleQR()"
 </div>
 
 
-<div class="hero-box eurus-style">
-  
-  <div class="hero-left">
-    <p class="tag">PRE-ORDER TOOLS</p>
-    <h2>Estimate your down payment and allocation</h2>
-    <p class="subtext">
-      Add products and quantities before submitting your preorder.
-    </p>
-  </div>
-
-  <div class="hero-actions">
-    <button class="btn btn-gold" onclick="toggleCalculator()">
-      Open Down Payment Calculator
-    </button>
-
-    <button class="btn btn-dark" onclick="toggleAllocation()">Allocation Calculator</button>
-    <button class="btn btn-Gold" onclick="toggleHistory()">History</button>
   </div>
 
 </div>
 
-     
-</header>
 
-<!-- ✅ OPEN DOWNPAYMENT CALCULATOR MODAL -->
+<!-- CALCULATOR MODAL -->
+<!-- CALCULATOR MODAL -->
 <div id="calcModal" class="calc-modal hidden">
 
-  <div class="calc-box">
+    <div class="calc-box">
 
-    <div class="calc-header">
-      <div>
-        <span class="tag">ORDER PLANNING</span>
-        <h2>Down Payment Calculator</h2>
-      </div>
-      <button onclick="toggleCalculator()">✕</button>
+        <div class="calc-header">
+
+            <div>
+                <span class="tag">ORDER PLANNING</span>
+                <h2>Calculator</h2>
+            </div>
+
+            <button onclick="toggleCalculator()">✕</button>
+
+        </div>
+
+        <h3>Down Payment & Allocation Calculator</h3>
+
+        <div class="calc-top">
+
+            <label for="calc-product">Select Product</label>
+
+            <select
+                id="calc-product"
+                onchange="updateCalculator()">
+            </select>
+
+        </div>
+
+        <div class="alloc-grid">
+
+            <div class="alloc-inputs">
+
+               <label for="alloc-input">Allocation %</label>
+
+                <input
+                    id="alloc-input"
+                    type="number"
+                    step="0.01"
+                    placeholder="8.62"
+                    oninput="updateCalculator()">
+
+               <label for="units-input">Units Ordered</label>
+
+                <input
+                    id="units-input"
+                    type="number"
+                    placeholder="100"
+                    oninput="updateCalculator()">
+
+                <div class="calc-summary-card">
+
+                    <p>Total Down Payment (30%)</p>
+
+                    <h2 id="calc-dp">₱0</h2>
+
+                </div>
+
+            </div>
+
+            <div class="alloc-result-box">
+
+                <p>ACTUAL UNITS YOU WILL RECEIVE</p>
+
+                <h2 id="alloc-result">0 Units</h2>
+
+                <div id="alloc-formula"></div>
+
+                <div id="alloc-note"></div>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <!-- PRODUCT SELECT -->
-    <div class="calc-top">
-      <select id="calc-product"></select>
-      <button onclick="addItem()">Add Product</button>
-    </div>
-
-    <!-- TABLE -->
-    <div id="calc-items"></div>
-
-    <!-- SUMMARY -->
-    <div class="calc-summary">
-      <div>
-        <p>Items</p>
-        <h3 id="calc-count">0</h3>
-      </div>
-
-      <div>
-        <p>Order Total</p>
-        <h3 id="calc-total">₱0</h3>
-      </div>
-
-      <div>
-        <p>30% Down Payment</p>
-        <h3 id="calc-dp">₱0</h3>
-      </div>
-    </div>
-
-  </div>
 </div>
 
-<!-- ALLOCATION MODAL -->
-<div id="allocationModal" class="alloc-modal ">
-  <div class="alloc-box">
-
-    <div class="alloc-header">
-      <div>
-        <span class="alloc-tag">ALLOCATION TOOL</span>
-        <h2>Allocation Calculator</h2>
-      </div>
-      <button onclick="toggleAllocation()">✕</button>
-    </div>
-
-    <p class="alloc-desc">
-      Calculate how many units you will receive based on allocation.
-    </p>
-
-    <div class="alloc-grid">
-
-      <!-- LEFT INPUTS -->
-      <div class="alloc-inputs">
-        <label>Allocation %</label>
-        <input id="alloc-input" type="number" step="0.01" placeholder="8.62" oninput="updateAllocation()">
-
-        <label>Units Ordered</label>
-        <input id="units-input" type="number" placeholder="100" oninput="updateAllocation()">
-      </div>
-
-      <!-- RIGHT RESULT -->
-      <div class="alloc-result-box">
-        <p>ACTUAL UNITS YOU WILL RECEIVE</p>
-        <h1 id="alloc-result">0</h1>
-
-        <div class="alloc-formula" id="alloc-formula"></div>
-        <div class="alloc-note" id="alloc-note"></div>
-      </div>
-
-    </div>
-
-  </div>
-</div>
 
 <div id="qrModal" class="qr-modal hidden">
 
@@ -265,6 +242,8 @@ onclick="toggleQR()"
         <span id="checkoutBalance">₱0</span>
     </div>
 
+
+
 </div>
 
     <!-- PAYMENT METHODS -->
@@ -304,30 +283,21 @@ onclick="toggleQR()"
     </div>
 
     <!-- BUTTON -->
-    <a
-      href="https://m.me/marquez.1927"
-      target="_blank"
-      class="zakenza-send-btn"
-    >
-      SEND PROOF TO MESSENGER
-    </a>
+   <a
+    href="https://m.me/marquez.1927"
+    target="_blank"
+    class="zakenza-send-btn">
+    SEND PROOF TO MESSENGER
+</a>
 
+</div> <!-- zakenza-note area -->
+</div> <!-- zakenza-pay-box -->
+</div> <!-- qrModal -->
 
-
-SEND ORDER
-
-</button>
-
-  </div>
-
-</div>
-  </div>
-
-</div>
-
-
-<!-- SCRIPTS -->
+<!-- PRODUCTS -->
 <div id="productContainer"></div>
+
+<script src="Products.js"></script>
 <script src="script.js"></script>
 
 </body>
