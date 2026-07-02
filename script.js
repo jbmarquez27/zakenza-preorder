@@ -1,134 +1,5 @@
-
-
 let cart = [];
 
-const products = [
-  {
-    name: "First Partner Pack – Series 2",
-    img: "firstpartner.png",
-    unitPrice: 1400,
-    casePrice: 8400,
-    unitDP: 420,
-    caseDP: 2520,
-    status: "open",
-  details: {
-    
-  }
-
-
-  },
-
-  {
-    name: "Mega Greninja EX Premium Collection",
-    img: "greninja.png",
-    unitPrice: 3600,
-    casePrice: 21600,
-    unitDP: 1080,
-    caseDP: 6480,
-    status: "open",
-  details: {
-    
-  }
-
-
-  },
-
-{
-  name: "Pokemon TCG [ME05] Pitch Black Booster Box",
-  img: "Pitch Black Booster Box.png",
-  unitPrice: 8500,
-  unitDP: 2550,
-  status: "coming",
-  details: {
-    pack: "10 Cards",
-    box: "36 Packs",
-    case: "6 Boxes",
-    language: "English"
-  }
-  },
-
-{
-  name: "Pokemon TCG [ME05] Pitch Black Booster Bundle",
-  img: "Pitch Black Booster Bundle.png",
-  unitPrice: 2000,
-  unitDP: 600,
-  status: "coming",
-  details: {
-    unit: "6 Packs",
-    case: "25 Units",
-    language: "English"
-  }
-  },
-
-{ 
-    name: "Pokemon TCG [ME05] Pitch Black Blister ",
-    img: "Blister.png",
-    unitPrice: 350,
-    casePrice: 100800,
-    unitDP: 105,
-    caseDP: 30240,
-    status: "coming",
-  details: {
-    unit: "1 Pack | 1 Coin | 1 Code Card ",
-    case: "288 Units",
-    language: "English"
-  }
-
-  },
-
-{
-    name: "Pokemon TCG [ME05] Pitch Black Sleeved Booster",
-    img: "Pitch Black Sleeves.png",
-    unitPrice: 290,
-    casePrice: 41760,
-    unitDP: 87,
-    caseDP: 12528,
-    status: "coming",
-  details: {
-    unit: "1 Pack",
-    case: "144 Units",
-    language: "English"
-  }
-
-  },
-
-{ 
-    name:"Pokemon TCG [ME05] Pitch Black Half Booster",
-    img: "half booster.png",
-    unitPrice: 4300,
-    casePrice: 51600,
-    unitDP: 1290,
-    caseDP: 15480,
-    status: "coming",
-  details: {
-     pack: "10 Cards",
-    box: "18 Packs",
-    case: "12 Boxes",
-    language: "English"
-
-  }
-
-  },
-
-{ 
-    name:"Pokemon TCG [ME05] Pitch Black ETB",
-    img: "Pitch Black ETB.png",
-    unitPrice: 3600,
-    casePrice: 36000,
-    unitDP: 1080,
-    caseDP: 10800,
-    status: "coming",
-  details: {
-     pack: "10 Cards",
-    box: "18 Packs",
-    case: "12 Boxes",
-    language: "English"
- }
-
-  }
-
-
-];
 
 function renderProducts() {
   const container = document.getElementById("productContainer");
@@ -224,7 +95,6 @@ ${p.status === "coming"
 
   // ✅ RUN AFTER LOAD
 renderProducts();
-startTimers();
 
 
 let calcItems = [];
@@ -233,101 +103,78 @@ function toggleCalculator() {
   document.getElementById("calcModal").classList.toggle("hidden");
 }
 
-/* LOAD PRODUCTS INTO DROPDOWN */
+// Load products into the calculator dropdown
 function loadCalcProducts() {
-  const select = document.getElementById("calc-product");
-  select.innerHTML = "";
 
-  products.forEach((p, i) => {
-    select.innerHTML += `<option value="${i}">
-      ${p.name} - ₱${p.unitPrice}
-    </option>`;
-  });
+    const select = document.getElementById("calc-product");
+
+    if (!select) return;
+
+    select.innerHTML = "";
+
+    products.forEach((p, i) => {
+
+        select.innerHTML += `
+            <option value="${i}">
+                ${p.name} - ₱${p.unitPrice.toLocaleString()}
+            </option>
+        `;
+
+    });
+
+    updateCalculator();
 }
 
-function addItem() {
-  const index = document.getElementById("calc-product").value;
-  const p = products[index];
-
-  calcItems.push({
-    name: p.name,
-    price: p.unitPrice,
-    qty: 1
-  });
-
-  renderCalc();
-}
-
-function renderCalc() {
-  const container = document.getElementById("calc-items");
-
-  let html = "";
-  let total = 0;
-  let count = 0;
-
-  calcItems.forEach((item, i) => {
-    const sub = item.price * item.qty;
-    total += sub;
-    count += item.qty;
-
-    html += `
-      <div class="calc-row">
-        <div>${item.name}</div>
-        <div>₱${item.price.toLocaleString()}</div>
-
-        <input type="number" value="${item.qty}"
-          onchange="updateQty(${i}, this.value)" />
-
-        <div>₱${(sub * 0.3).toLocaleString()}</div>
-
-        <button onclick="removeItem(${i})">X</button>
-      </div>
-    `;
-  });
-
-  container.innerHTML = html;
-
-  document.getElementById("calc-total").innerText =
-    "₱" + total.toLocaleString();
-
-  document.getElementById("calc-dp").innerText =
-    "₱" + (total * 0.3).toLocaleString();
-
-  document.getElementById("calc-count").innerText = count;
-}
-
-function updateQty(i, val) {
-  calcItems[i].qty = parseInt(val) || 0;
-  renderCalc();
-
-}
-
-function removeItem(i) {
-  calcItems.splice(i, 1);
-  renderCalc();
-
-}
-
-function toggleAllocation() {
-  document.getElementById("allocationModal").classList.toggle("show");
-}
-
+// Keep compatibility if HTML still calls updateAllocation()
 function updateAllocation() {
-  const alloc = parseFloat(document.getElementById("alloc-input").value) || 0;
-  const units = parseFloat(document.getElementById("units-input").value) || 0;
-
-  const exact = (alloc / 100) * units;
-  const final = Math.floor(exact);
-
-  document.getElementById("alloc-result").innerText = final;
-
-  document.getElementById("alloc-formula").innerText =
-    `${alloc.toFixed(2)}% × ${units} = ${exact.toFixed(2)} units`;
-
-  document.getElementById("alloc-note").innerText =
-    "Result is rounded down to whole units.";
+    updateCalculator();
 }
 
+// Main calculator
+function updateCalculator() {
+
+    const productSelect = document.getElementById("calc-product");
+    if (!productSelect) return;
+
+    const product = products[productSelect.value];
+
+    if (!product) {
+
+        document.getElementById("calc-dp").innerText = "₱0";
+        document.getElementById("alloc-result").innerText = "0 Units";
+        document.getElementById("alloc-formula").innerHTML = "";
+        document.getElementById("alloc-note").innerHTML = "";
+
+        return;
+    }
+
+    const qty =
+        parseInt(document.getElementById("units-input").value) || 0;
+
+    const allocation =
+        parseFloat(document.getElementById("alloc-input").value) || 0;
+
+    // 30% Down Payment
+    const downPayment = product.unitPrice * qty * 0.30;
+
+    document.getElementById("calc-dp").innerText =
+        "₱" + downPayment.toLocaleString();
+
+    // Allocation Result
+    const receivedUnits =
+        Math.floor((allocation / 100) * qty);
+
+    document.getElementById("alloc-result").innerText =
+        receivedUnits + " Units";
+
+    document.getElementById("alloc-formula").innerHTML =
+        `${allocation.toFixed(2)}% × ${qty} = <strong>${receivedUnits}</strong> Units`;
+
+    document.getElementById("alloc-note").innerHTML =
+        `30% Down Payment: <strong>₱${downPayment.toLocaleString()}</strong>`;
+}
+
+// Initialize calculator
 
 /* INIT */
 loadCalcProducts();
@@ -565,12 +412,15 @@ function toggleQR(){
 
 
 
+
 document.addEventListener("DOMContentLoaded", () => {
 
-    updatePlannerV2();
 
     renderProducts();
 
-    startTimers();
+    loadCalcProducts();
+
+    updateCalculator();
+
 
 });
