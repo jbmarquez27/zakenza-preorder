@@ -1,4 +1,25 @@
 /* =====================================================
+   GLOBAL
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    background:#050505;
+
+    color:#fff;
+
+    font-family:"Cinzel", Arial, sans-serif;
+
+}
+
+/* =====================================================
    HEADER / TOPBAR
 ===================================================== */
 
@@ -6,7 +27,7 @@
     display:grid;
     grid-template-columns:auto 1fr auto;
     align-items:center;
-    gap:32px;
+    gap:18px;
 
     padding:18px 28px;
 
@@ -19,7 +40,7 @@
 .top-left{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:18px;
 }
 
 .logo img{
@@ -214,9 +235,10 @@
     flex-direction:column;
     align-items:center;
 
-    background:#0d0d0d;
+    background:#050505;
 
-    border:1px solid gold;
+    border:1.5px solid #FFD700;   
+
     border-radius:14px;
 
     padding:18px;
@@ -228,6 +250,7 @@
     overflow:hidden;
 
 }
+
 
 .product-card:hover{
 
@@ -251,15 +274,13 @@
 
 .product-card h3{
 
-    font-size:15px;
+    color:#fff;
 
-    line-height:1.35;
+    font-family:"Cinzel", serif;
 
-    min-height:42px;
+    font-size:20px;
 
-    margin:10px 0;
-
-    color:white;
+    font-weight:700;
 
 }
 
@@ -273,9 +294,12 @@
 
     font-weight:800;
 
-    color:white;
-
     margin-top:8px;
+
+
+    color:#fff;
+
+    font-family:"Cinzel", serif;
 
 }
 
@@ -1449,4 +1473,5 @@
     gap:10px;
 }
 
+}
 
