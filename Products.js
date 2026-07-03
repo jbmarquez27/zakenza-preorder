@@ -4,7 +4,7 @@ const products = [
     img: "Day.png",
     unitPrice: 12000,
     unitDP: 3600,
-    deadline: "2026-05-02T18:00:00"
+    status: "coming"
   },
 
 {
@@ -12,7 +12,7 @@ const products = [
     img: "30th Booster Bundle.png",
     unitPrice: 2000,
     unitDP: 600,
-    deadline: "2026-05-02T18:00:00"
+    status: "coming"
   },
 
 
@@ -21,7 +21,7 @@ const products = [
     img: "ETB 30th.png",
     unitPrice: 3950,
     unitDP: 1185,
-    deadline: "2026-05-02T18:00:00"
+    status: "coming"
   },
 
 { 
@@ -29,7 +29,7 @@ const products = [
     img: "EX Box.png",
     unitPrice: 3950,
     unitDP: 1185,
-    deadline: "2026-05-02T18:00:00"
+    status: "coming"
   },
 
 { 
@@ -37,7 +37,7 @@ const products = [
     img: "Tech Sticker Collection.png",
     unitPrice: 3950,
     unitDP: 1185,
-    deadline: "2026-05-02T18:00:00"
+    status: "coming"
   },
 
 
@@ -47,7 +47,7 @@ const products = [
     img: "Poster Collection.png",
     unitPrice: 3950,
     unitDP: 1185,
-    deadline: "2026-05-02T18:00:00"
+    status: "coming"
   },
 
 { 
@@ -55,17 +55,17 @@ const products = [
     img: "Binder Collection.png",
     unitPrice: 3950,
     unitDP: 1185,
-    deadline: "2026-05-02T18:00:00"
+    status: "coming"
   },
 
 
 
 { 
     name:"Pokemon TCG 30th Celebration 2 pack Blister",
-    img: "2 pack Blister.png",
+    img: "2 Pack Blister.png",
     unitPrice: 3950,
     unitDP: 1185,
-    deadline: "2026-05-02T18:00:00"
+    status: "coming"
   },
 
 
@@ -74,7 +74,7 @@ const products = [
     img: "Knockout Collection.png",
     unitPrice: 3950,
     unitDP: 1185,
-    deadline: "2026-05-02T18:00:00"
+    status: "coming"
   },
 
 { 
@@ -82,15 +82,15 @@ const products = [
     img: "Battle Deck.png",
     unitPrice: 3950,
     unitDP: 1185,
-    deadline: "2026-05-02T18:00:00"
+    status: "coming"
   },
 
 { 
     name:"Pokemon TCG 30th Celebration Mini Tins",
-    img: "Mini Tins.png",
+    img: "mini tins.png",
     unitPrice: 3950,
     unitDP: 1185,
-    deadline: "2026-05-02T18:00:00"
+    status: "coming"
   },
 
 { 
@@ -98,21 +98,16 @@ const products = [
     img: "Ditto Premium Collection.png",
     unitPrice: 3950,
     unitDP: 1185,
-    deadline: "2026-05-02T18:00:00"
+    status: "coming"
   },
 
 { 
     name:"Pokemon TCG 30th Celebration Mew & Mewtwo Figure",
-    img: "Figure Mew.png",
+    img: "figure Mew.png",
     unitPrice: 3950,
     unitDP: 1185,
-    deadline: "2026-05-02T18:00:00"
+    status: "coming"
   }
-
-
-
-
-
 
 
 
