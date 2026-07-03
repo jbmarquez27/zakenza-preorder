@@ -834,19 +834,17 @@ body{
 }
 
 /* =====================================================
-   CALCULATOR MODAL
+   CALCULATOR MODAL V2
 ===================================================== */
 
 .calc-modal{
     position:fixed;
     inset:0;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
-    background:rgba(0,0,0,.75);
-
+    background:rgba(0,0,0,.82);
+    backdrop-filter:blur(6px);
     z-index:9999;
 }
 
@@ -854,72 +852,269 @@ body{
     display:none;
 }
 
+/* ===========================
+   MAIN BOX
+=========================== */
+
 .calc-box{
+
+    width:min(1100px,95vw);
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
     background:#0b0b0b;
-    border:2px solid gold;
-    border-radius:20px;
-    padding:30px;
-    color:#fff;   /* FIX */
-}
 
-.calc-box h1,
-.calc-box h2,
-.calc-box h3,
-.calc-box p,
-.calc-box label,
-.calc-box span{
+    border:2px solid #ffd700;
+
+    border-radius:24px;
+
+    padding:40px;
+
+    box-shadow:
+        0 0 30px rgba(255,215,0,.18),
+        inset 0 0 0 1px rgba(255,255,255,.05);
+
     color:#fff;
 }
 
-.calc-box select,
-.calc-box input{
-    width:100%;
-    padding:12px;
-
-    background:#111827;
-    color:#fff;
-
-    border:1px solid gold;
-    border-radius:10px;
-}
-
-.calc-box input::placeholder{
-    color:#aaa;
-}
+/* ===========================
+   HEADER
+=========================== */
 
 .calc-header{
+
     display:flex;
+
     justify-content:space-between;
-    align-items:center;
+
+    align-items:flex-start;
+
+    margin-bottom:30px;
+}
+
+.calc-header h1{
+
+    font-size:46px;
+
+    font-weight:900;
+
+    line-height:1;
+
+    margin-top:6px;
+}
+
+.calc-header small{
+
+    display:block;
+
+    color:#ffd700;
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
 }
 
 .calc-header button{
-    width:40px;
-    height:40px;
+
+    width:56px;
+
+    height:56px;
+
     border:none;
-    border-radius:10px;
-    background:gold;
+
+    border-radius:16px;
+
+    background:#ffd700;
+
     color:#000;
+
+    font-size:26px;
+
+    font-weight:bold;
+
     cursor:pointer;
+
+    transition:.25s;
 }
+
+.calc-header button:hover{
+
+    transform:scale(1.08);
+
+    background:#ffea61;
+}
+
+/* ===========================
+   SELECT
+=========================== */
 
 .calc-top{
 
-    display:flex;
+    margin-bottom:25px;
+}
 
-    gap:10px;
+.calc-top label{
 
-    margin-bottom:20px;
+    display:block;
 
+    margin-bottom:8px;
+
+    font-weight:700;
 }
 
 .calc-top select{
 
-    flex:1;
+    width:100%;
 
+    height:60px;
+
+    background:#111827;
+
+    color:#fff;
+
+    border:1px solid gold;
+
+    border-radius:14px;
+
+    padding:0 18px;
+
+    font-size:18px;
+
+    transition:.2s;
 }
 
+.calc-top select:focus{
+
+    outline:none;
+
+    border-color:#ffd700;
+
+    box-shadow:0 0 12px rgba(255,215,0,.35);
+}
+
+/* ===========================
+   TWO COLUMN
+=========================== */
+
+.alloc-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 420px;
+
+    gap:35px;
+
+    margin-top:25px;
+}
+
+/* ===========================
+   INPUTS
+=========================== */
+
+.alloc-inputs{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+}
+
+.alloc-inputs label{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+    display:block;
+}
+
+.alloc-inputs input{
+
+    width:100%;
+
+    height:66px;
+
+    background:#111827;
+
+    color:#fff;
+
+    border:1px solid gold;
+
+    border-radius:16px;
+
+    padding:0 20px;
+
+    font-size:28px;
+
+    transition:.25s;
+}
+
+.alloc-inputs input:focus{
+
+    outline:none;
+
+    border-color:#ffd700;
+
+    box-shadow:0 0 14px rgba(255,215,0,.35);
+}
+
+/* ===========================
+   DOWNPAYMENT CARD
+=========================== */
+
+.calc-summary-card{
+
+    margin-top:30px;
+
+    background:#08122b;
+
+    border:1px solid #2347b3;
+
+    border-radius:20px;
+
+    padding:25px;
+}
+
+.calc-summary-card p{
+
+    font-size:18px;
+
+    color:#d8d8d8;
+
+    margin-bottom:10px;
+}
+
+.calc-summary-card h2{
+
+    color:#fff;
+
+    font-size:48px;
+
+    font-weight:900;
+
+    margin:0;
+}
+
+/* ===========================
+   RESULT CARD
+=========================== */
+
 .alloc-result-box{
+
+    background:linear-gradient(180deg,#FFD84A,#FFC400);
+
+    border:4px solid #000;
+
+    border-radius:24px;
+
+    padding:35px;
 
     display:flex;
 
@@ -927,137 +1122,67 @@ body{
 
     justify-content:center;
 
-    align-items:center;
-
     text-align:center;
 
-    background:#FFD21F;
+    color:#000;
 
-    color:#111;
-
-    border-radius:18px;
-
-    padding:25px;
-
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.35),
+        inset 0 0 0 2px rgba(255,255,255,.15);
 }
 
 .alloc-result-box p{
 
-    color:#333;
+    font-size:18px;
 
-    font-weight:700;
+    font-weight:800;
 
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    color:#111;
 }
 
 .alloc-result-box h2{
 
-    font-size:52px;
+    font-size:74px;
+
+    font-weight:900;
+
+    margin:18px 0;
+
+    line-height:1;
 
     color:#000;
-
-    margin:12px 0;
-
 }
 
 #alloc-formula{
 
-    font-size:18px;
+    font-size:24px;
 
-    font-weight:bold;
+    font-weight:800;
 
-    color:#111;
+    color:#000;
 
+    margin-top:10px;
 }
 
 #alloc-note{
 
-    margin-top:16px;
+    margin-top:28px;
 
-    font-size:18px;
+    padding-top:22px;
 
-    color:#111;
-
-}
-
-.alloc-inputs{
-    display:flex;
-    flex-direction:column;
-    gap:16px;
-}
-
-.alloc-inputs label{
-    color:#fff;
-    font-weight:700;
-    font-size:14px;
-}
-
-.alloc-inputs input,
-.calc-top select{
-
-    width:100%;
-    height:48px;
-
-    background:#111827;
-
-    color:#fff;
-
-    border:1px solid gold;
-
-    border-radius:10px;
-
-    padding:0 14px;
-
-    font-size:16px;
-
-    box-sizing:border-box;
-}
-
-.calc-summary-card{
-
-    margin-top:20px;
-
-    background:#08122b;
-
-    border:1px solid #1e40af;
-
-    border-radius:16px;
-
-    padding:20px;
-
-}
-
-.calc-summary-card p{
-
-    color:#cbd5e1;
-
-    margin:0;
-
-}
-
-.calc-summary-card h2{
-
-    color:gold;
+    border-top:3px solid #000;
 
     font-size:34px;
 
-    margin-top:10px;
+    font-weight:900;
 
+    color:#000;
 }
 
-.calc-box{
-
-    color:white;
-
-}
-
-.calc-box h2,
-.calc-box h3,
-.calc-box p,
-.calc-box label{
-
-    color:white;
-
-}
 
 /* =====================================================
    ALLOCATION MODAL
@@ -1471,6 +1596,45 @@ body{
 .summary-bottom{
     flex-direction:column;
     gap:10px;
+}
+
+   /* ===========================
+   MOBILE CALC MODAL
+=========================== */
+
+@media(max-width:900px){
+
+.alloc-grid{
+
+    grid-template-columns:1fr;
+}
+
+.alloc-result-box{
+
+    order:-1;
+}
+
+.calc-box{
+
+    padding:22px;
+}
+
+.calc-header h1{
+
+    font-size:34px;
+}
+
+.alloc-result-box h2{
+
+    font-size:56px;
+}
+
+#alloc-note{
+
+    font-size:28px;
+}
+
+
 }
 
 }
