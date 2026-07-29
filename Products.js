@@ -1,5 +1,74 @@
 const products = [
-  {
+ 
+{ 
+    name:"Pokemon TCG 30th Celebration ETB",
+    img: "ETB 30th.png",
+    unitPrice: 3950,
+    unitDP: 1185,
+    status: "open"
+
+releaseDate: "2026-08-15T10:00:00",
+
+    details:{
+        ...
+    }
+  },
+
+{ 
+    name:"Pokemon TCG 30th Celebration Sylveon & Greninja EX BOX",
+    img: "EX Box.png",
+    unitPrice: 3950,
+    unitDP: 1185,
+    status: "open"
+  },
+
+{ 
+    name:"Pokemon TCG 30th Celebration Tech Sticker Collection",
+    img: "Tech Sticker Collection.png",
+    unitPrice: 3950,
+    unitDP: 1185,
+ status: "open"
+   
+  },
+
+
+
+{ 
+    name:"Pokemon TCG 30th Celebration Poster Collection",
+    img: "Poster Collection.png",
+    unitPrice: 3950,
+    unitDP: 1185,
+    status: "open"
+  },
+
+{ 
+    name:"Pokemon TCG 30th Celebration Binder Collection",
+    img: "Binder Collection.png",
+    unitPrice: 3950,
+    unitDP: 1185,
+    status: "open"
+  },
+
+
+
+{ 
+    name:"Pokemon TCG 30th Celebration 2 pack Blister",
+    img: "2 pack Blister.png",
+    unitPrice: 3950,
+    unitDP: 1185,
+    status: "open"
+  },
+
+{ 
+    name:"Pokemon TCG 30th Celebration Knockout Collection",
+    img: "Knockout Collection.png",
+    unitPrice: 3950,
+    unitDP: 1185,
+    status: "open"
+  },
+
+
+ {
     name: "30th Celebration UPC Day & Night",
     img: "Day.png",
     unitPrice: 12000,
@@ -17,67 +86,6 @@ const products = [
 
 
 { 
-    name:"Pokemon TCG 30th Celebration ETB",
-    img: "ETB 30th.png",
-    unitPrice: 3950,
-    unitDP: 1185,
-    status: "coming"
-  },
-
-{ 
-    name:"Pokemon TCG 30th Celebration Sylveon & Greninja EX BOX",
-    img: "EX Box.png",
-    unitPrice: 3950,
-    unitDP: 1185,
-    status: "coming"
-  },
-
-{ 
-    name:"Pokemon TCG 30th Celebration Tech Sticker Collection",
-    img: "Tech Sticker Collection.png",
-    unitPrice: 3950,
-    unitDP: 1185,
-    status: "coming"
-  },
-
-
-
-{ 
-    name:"Pokemon TCG 30th Celebration Poster Collection",
-    img: "Poster Collection.png",
-    unitPrice: 3950,
-    unitDP: 1185,
-    status: "coming"
-  },
-
-{ 
-    name:"Pokemon TCG 30th Celebration Binder Collection",
-    img: "Binder Collection.png",
-    unitPrice: 3950,
-    unitDP: 1185,
-    status: "coming"
-  },
-
-
-
-{ 
-    name:"Pokemon TCG 30th Celebration 2 pack Blister",
-    img: "2 Pack Blister.png",
-    unitPrice: 3950,
-    unitDP: 1185,
-    status: "coming"
-  },
-
-
-{ 
-    name:"Pokemon TCG 30th Celebration Knockout Collection",
-    img: "Knockout Collection.png",
-    unitPrice: 3950,
-    unitDP: 1185,
-    status: "coming"
-  },
-
-{ 
     name:"Pokemon TCG 30th Celebration Battle Deck",
     img: "Battle Deck.png",
     unitPrice: 3950,
@@ -87,7 +95,7 @@ const products = [
 
 { 
     name:"Pokemon TCG 30th Celebration Mini Tins",
-    img: "mini tins.png",
+    img: "Mini Tins.png",
     unitPrice: 3950,
     unitDP: 1185,
     status: "coming"
@@ -103,7 +111,7 @@ const products = [
 
 { 
     name:"Pokemon TCG 30th Celebration Mew & Mewtwo Figure",
-    img: "figure Mew.png",
+    img: "Figure Mew.png",
     unitPrice: 3950,
     unitDP: 1185,
     status: "coming"
